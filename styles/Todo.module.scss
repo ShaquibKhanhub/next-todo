@@ -1,0 +1,43 @@
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.inputSection {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+
+  .todoItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: #f9f9f9;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+
+    button {
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
