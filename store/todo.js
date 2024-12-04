@@ -1,12 +1,21 @@
+"use client";
+
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const todoSlice = createSlice({
   name: "todos",
   initialState: [],
   reducers: {
-    addTodo: (state, action) => {},
-    deleteTodo: (state, action) => {},
-    updateTodo: (state, action) => {},
+    addTodo: (state, action) => {
+      state.push(action.payload);
+    },
+    deleteTodo: (state, action) => {
+      return state.filter((todo) => todo.id !== action.payload);
+    },
+    updateTodo: (state, action) => {
+      const index = state.findIndex((todo) => todo.id === action.payload.id);
+      if (index >= 0) state[index] = action.payload;
+    },
   },
 });
 
